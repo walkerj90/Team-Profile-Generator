@@ -13,7 +13,7 @@ Open the folder in the terminal, and make sure to install the app's necessary de
 ## Usage
 In the terminal, enter `node index.js` in the main directory. The first set of prompts assume that the user is the team manager. Once the first person's entry is submitted, the user is given the option to enter another team member or to generate the HTML file. For testing purposes type npm test in the terminal to see if the script passes all tests given.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7xBTzq0lQyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Walkthrough on YouTube since this app cannot be deployed. https://www.youtube.com/watch?v=7xBTzq0lQyU
 
 ## User Story
 
