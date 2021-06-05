@@ -55,3 +55,76 @@ const main = () => {
                 }
             }
         ])
+                // Runs if this is the first iteration.
+                .then(({ employeeName, id, email }) => {
+                    if (firstRun === true) {
+                        firstRun = false;
+                        inquirer
+                            .prompt(
+                                {
+                                    name: 'officeNumber',
+                                    type: 'input',
+                                    message: 'Office number?'
+                                }
+                            )
+                            .then((officeNumber) => {
+                                let manager = new Manager(employeeName, id, email, officeNumber);
+                                team.push(manager);
+                                inquirer
+                                    .prompt({
+                                        name: 'menu',
+                                        type: 'list',
+                                        message: 'Main Menu - Please select an option',
+                                        choices: ['Add a team member', 'Generate HTML file']
+                                    })
+                                    .then(({ menu }) => {
+                                        if (menu === 'Add a team member') {
+                                            main();
+                                        } else {
+                                            // Creates the team dashboard webpage.
+                                            makePage(team);
+                                        }
+                                    })
+                            })
+                                        } else {
+                // Allows the addition of other team members.
+                inquirer
+                    .prompt(
+                        {
+                            name: 'selection',
+                            type: 'list',
+                            message: 'What is this member\'s role?',
+                            choices: ['Engineer', 'Intern', 'Manager']
+                        }
+                    )
+                    // Adds Engineer
+                    .then(({ selection }) => {
+                        if (selection === 'Engineer') {
+                            inquirer
+                                .prompt(
+                                    {
+                                        name: 'github',
+                                        type: 'input',
+                                        message: 'GitHub username?'
+                                    }
+                                )
+                                .then((github) => {
+                                    let engineer = new Engineer(employeeName, id, email, github);
+                                    team.push(engineer);
+                                    inquirer
+                                        .prompt({
+                                            name: 'menu',
+                                            type: 'list',
+                                            message: 'Main Menu - Please select an option',
+                                            choices: ['Add a team member', 'Generate HTML file']
+                                        })
+                                        .then(({ menu }) => {
+                                            if (menu === 'Add a team member') {
+                                                main();
+                                            } else {
+                                                // Creates the team dashboard webpage.
+                                                makePage(team);
+                                            }
+                                        })
+                                })
+                        }
