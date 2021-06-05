@@ -1,10 +1,16 @@
 # Team-Profile-Generator
 
-## Your Task
+## The Task
 
 Your task is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Testing is key to making code maintainable, so you’ll also write a unit test for every part of your code and ensure that it passes each test.
 
 Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and all of the tests passing. You’ll need to submit a link to the video AND add it to the readme of your project.
+
+## Installation  
+Clone over repo from GitHub:  https://github.com/walkerj90/Team-Profile-Generator
+
+## Usage
+In the terminal, enter `node index.js` in the main directory. The first set of prompts assume that the user is the team manager. Once the first person's entry is submitted, the user is given the option to enter another team member or to generate the HTML file. For testing purposes type npm test in the terminal to see if the script passes all tests given.
 
 ## User Story
 
