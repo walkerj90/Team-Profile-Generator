@@ -30,4 +30,28 @@ const main = () => {
             {
                 name: 'id',
                 type: 'input',
+                message: 'Employee ID?',
+                validate: (id) => {
+                    if (!isNaN(id)) {
+                        return true;
+                    } else {
+                        console.log(' - not a valid input');
+                        return false;
+                    }
+                }
+            },
+            {
+                name: 'email',
+                type: 'input',
+                message: 'Email?',
+                validate: email => {
+                    if (emailValidate.validate(email)) {
+                        return true;
+                    } else {
+                        console.log(" - not a valid e-mail")
+                        return false;
+                    }
+
+                }
             }
+        ])
