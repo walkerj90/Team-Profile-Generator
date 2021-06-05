@@ -17,7 +17,7 @@ const main = () => {
             {
                 name: 'employeeName',
                 type: 'input',
-                message: 'what is the employees name?',
+                message: 'Please input the employees name',
                 validate: employeeName => {
                     if (employeeName) {
                         return true;
@@ -30,7 +30,7 @@ const main = () => {
             {
                 name: 'id',
                 type: 'input',
-                message: 'Employee ID?',
+                message: 'Please input the employees ID',
                 validate: (id) => {
                     if (!isNaN(id)) {
                         return true;
@@ -43,7 +43,7 @@ const main = () => {
             {
                 name: 'email',
                 type: 'input',
-                message: 'Email?',
+                message: 'Please input the employees E-mail address',
                 validate: email => {
                     if (emailValidate.validate(email)) {
                         return true;
