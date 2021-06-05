@@ -8,6 +8,7 @@ Because this application won’t be deployed, you’ll need to provide a link to
 
 ## Installation  
 Clone over repo from GitHub:  https://github.com/walkerj90/Team-Profile-Generator
+Open the folder in the terminal, and make sure to install the app's necessary dependencies. To do this, enter `npm i`
 
 ## Usage
 In the terminal, enter `node index.js` in the main directory. The first set of prompts assume that the user is the team manager. Once the first person's entry is submitted, the user is given the option to enter another team member or to generate the HTML file. For testing purposes type npm test in the terminal to see if the script passes all tests given.
